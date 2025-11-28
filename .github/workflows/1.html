@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel de Intensidad del Audio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #audioLevel {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nivel de Intensidad del Audio</h1>
+    <div id="audioLevel">Cargando...</div>
+
+    <script>
+        // Simulación de un nivel de audio (puedes reemplazar esto con un sensor real)
+        function getAudioLevel() {
+            return Math.floor(Math.random() * 101); // Genera un nivel entre 0 y 100
+        }
+
+        function updateAudioLevel() {
+            const level = getAudioLevel();
+            document.getElementById('audioLevel').innerText = `Nivel actual: ${level}%`;
+        }
+
+        setInterval(updateAudioLevel, 1000); // Actualiza cada segundo
+    </script>
+</body>
+</html>
